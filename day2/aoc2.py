@@ -1,3 +1,5 @@
+import os
+
 def check(L):
     safe = True
     increasing = True
@@ -23,8 +25,10 @@ def check(L):
 def evaluateSafety():
     #We need to parse an input of the following format:
     #1 2 3 4
+    current_dir = os.getcwd()
+    input_path = os.path.join(current_dir, "day2", "input2.txt")
     levels = []
-    with open('/Users/walid/Documents/AdventOfCode2024/input2.txt','r') as f:
+    with open(input_path,'r') as f:
         for line in f:
             numbers = line.split()
             t = []

@@ -1,4 +1,12 @@
-def parseInput(filename="/Users/walid/Documents/AdventOfCode2024/input.txt"):
+import os
+
+# Get the current working directory
+current_dir = os.getcwd()
+
+# Create the path to your input file
+input_path = os.path.join(current_dir, "day1", "input1.txt")
+
+def parseInput(filename=input_path):
 
     list1 = []
     list2 = []
